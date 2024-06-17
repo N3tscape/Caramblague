@@ -9,10 +9,6 @@ npm-debug.log*
 # Environment variables
 .env
 
-# SQLite database
-database.sqlite
-*.sqlite3
-
 # MacOS
 .DS_Store
 
