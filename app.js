@@ -2,9 +2,12 @@ const express = require("express");
 const app = express();
 const sequelize = require("./config/database");
 const jokeRoutes = require("./routes/jokeRoutes");
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpecs = require("./docs/swagger");
 
 app.use(express.json());
 app.use("/api", jokeRoutes);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 const startServer = async () => {
   try {
