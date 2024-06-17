@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const sequelize = require("./config/database");
+const jokeRoutes = require("./routes/jokeRoutes");
 
 app.use(express.json());
+app.use("/api", jokeRoutes);
 
 const startServer = async () => {
   try {
