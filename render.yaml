@@ -1,0 +1,7 @@
+services:
+  - name: web
+    env: node
+    buildCommand: npm install --production
+    startCommand: npm start
+    envVars:
+      NODE_ENV: production
